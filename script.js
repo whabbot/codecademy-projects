@@ -12,18 +12,13 @@ function compareGuesses(userGuess, compGuess, targetNo) {
     // User win returns true, computer win returns false
     const userDelta = getAbsoluteDistance(targetNo, userGuess);
     const compDelta = getAbsoluteDistance(targetNo, compGuess);
-    // COULD BE REPLACED WITH SIMPLY "return userDelta <= compDelta"
-    if (compDelta < userDelta) {
-        return false;
-    } else {
-        return true;
-    }
+    return userDelta <= compDelta;
 }
 
 function updateScore(winner) {
     if (winner === 'human') {
         humanScore++;
-    } else {
+    } else if (winner === 'computer') {
         computerScore++;
     }
 }
@@ -37,7 +32,5 @@ function getAbsoluteDistance(number1, number2) {
 }
 
 function outOfRange(number) {
-    if (number < 0 || number > 9) {
-        return true;
-    }
+    return number < 0 || number > 9
 }
