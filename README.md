@@ -1,2 +1,2 @@
 # codecademy-projects
-A store of the projects completed through codecademy
+A store of my projects completed through codecademy
