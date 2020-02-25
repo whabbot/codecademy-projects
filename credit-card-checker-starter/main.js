@@ -107,5 +107,7 @@ const idInvalidCardCompanies = cards => {
 const companyNotAlreadyPresent = (company, companies) => companies.indexOf(company) < 0
 
 const invalidCards = findInvalidCards(batch);
+
 console.log(idInvalidCardCompanies(invalidCards));
 
+// Extra stuff below
